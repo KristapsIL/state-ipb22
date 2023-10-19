@@ -18,8 +18,8 @@ function App() {
       <form>
         <input type="number" value={ratioChange} onChange={handleRatioChange}></input>
       </form>
-      <button onClick={addOne}>button +1</button>
-      <button onClick={minusOne}>button -1</button>
+  <button onClick={addOne}>button +{ratioChange}</button>
+  <button onClick={minusOne}>button -{ratioChange}</button>
       <h1>{result}</h1>
     </div>
   );

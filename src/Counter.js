@@ -1,8 +1,8 @@
 import {useState } from "react";
 
-function Counter(){
+function Counter(props){
   const [result, setResult] = useState(0);
-  const [ratioChange, setRatioChange] = useState(1);
+  const [ratioChange, setRatioChange] = useState(props.defRatio);
 
   function addOne(){
     setResult(result+parseInt(ratioChange));

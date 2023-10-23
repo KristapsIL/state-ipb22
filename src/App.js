@@ -1,6 +1,11 @@
 import Counter from "./Counter";
-import Hello from "./Hello"
+import Hello from "./Hello";
+import Check from "./Check";
 function App() {
+  const chek = [true,true,false];
+  const checkJSX = chek.map((theValue,index)=>{
+    return <Check defCheck={theValue} key={index}/>
+  })
   const ratios=["7","43","101"];
   const ratiosJSX = ratios.map((theRatio,index)=>{
     return <Counter defRatio={theRatio} key={index}/>
@@ -11,6 +16,7 @@ function App() {
   });
   return(
     <>
+    {checkJSX}
     {ratiosJSX}
     {vardiJSX}
     </>

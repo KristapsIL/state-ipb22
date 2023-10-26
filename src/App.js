@@ -1,7 +1,12 @@
 import Counter from "./Counter";
 import Hello from "./Hello";
 import Check from "./Check";
+import LabelCheck from "./LabelCheck";
 function App() {
+  const labels = [{label:"Agree to the Policy", check:true},{label:"Receive Offers", check:false}]
+  const labelJSX = labels.map(()=>{
+    <Check/>
+  });
   const chek = [true,true,false];
   const checkJSX = chek.map((theValue,index)=>{
     return <Check defCheck={theValue} key={index}/>
@@ -19,6 +24,7 @@ function App() {
     {checkJSX}
     {ratiosJSX}
     {vardiJSX}
+    <LabelCheck/>
     </>
   )
 }

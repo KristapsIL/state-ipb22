@@ -1,10 +1,12 @@
 import {useState } from "react";
-import Check from "./Check";
 function LabelCheck(props){
-
+    const [check ,setCheck] = useState(props.checked)
     return(
         <>
-            <input/><label></label>
+            <label>
+                {props.label}
+                <input type="checkbox" checked={check} onChange={() => {setCheck(!check)}}/>
+            </label>
         </>
     )
 }
